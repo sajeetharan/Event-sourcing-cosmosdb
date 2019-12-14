@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28711.60
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureTableEventSourcingTest.Domain", "AzureTableEventSourcingTest.Domain\AzureTableEventSourcingTest.Domain.csproj", "{C1DB8FB5-51E5-409C-A9CB-0527B2E34674}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureTableEventSourcingTest.Infrastructure", "AzureTableEventSourcingTest.Infrastructure\AzureTableEventSourcingTest.Infrastructure.csproj", "{9B3E733D-1587-4C14-B06E-18DDF518A1C1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureTableEventSourcingTest.EventConsumers.AzureFunctions", "AzureTableEventSourcingTest.EventConsumers.AzureFunctions\AzureTableEventSourcingTest.EventConsumers.AzureFunctions.csproj", "{23B541BA-3A71-416F-8DCC-6224A7B8E15B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureTableEventSourcingTest.WebApi", "AzureTableEventSourcingTest.WebApi\AzureTableEventSourcingTest.WebApi.csproj", "{D31C01CD-5F6A-4744-93AB-02F777A398B5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deployment", "Deployment", "{26FFC3DD-8C90-4A97-80AC-1615716443D1}"
+	ProjectSection(SolutionItems) = preProject
+		Deployment\azuredeploy.json = Deployment\azuredeploy.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1DB8FB5-51E5-409C-A9CB-0527B2E34674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1DB8FB5-51E5-409C-A9CB-0527B2E34674}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1DB8FB5-51E5-409C-A9CB-0527B2E34674}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1DB8FB5-51E5-409C-A9CB-0527B2E34674}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B3E733D-1587-4C14-B06E-18DDF518A1C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B3E733D-1587-4C14-B06E-18DDF518A1C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B3E733D-1587-4C14-B06E-18DDF518A1C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B3E733D-1587-4C14-B06E-18DDF518A1C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23B541BA-3A71-416F-8DCC-6224A7B8E15B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23B541BA-3A71-416F-8DCC-6224A7B8E15B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23B541BA-3A71-416F-8DCC-6224A7B8E15B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23B541BA-3A71-416F-8DCC-6224A7B8E15B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D31C01CD-5F6A-4744-93AB-02F777A398B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D31C01CD-5F6A-4744-93AB-02F777A398B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D31C01CD-5F6A-4744-93AB-02F777A398B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D31C01CD-5F6A-4744-93AB-02F777A398B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {41EC4438-A95B-4528-A780-E89856A0CFA6}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,87 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "databaseAccounts_esonazure_name": {
+      "defaultValue": "esonazure",
+      "type": "string"
+    },
+    "storageAccounts_esonazuretalk_name": {
+      "defaultValue": "esonazuretalk",
+      "type": "string"
+    }
+  },
+  "variables": {},
+  "resources": [
+    {
+      "comments": "Generalized from resource: '/subscriptions/8a22d1e5-bf7f-433a-bfa2-a480209f6bc5/resourceGroups/event-sourcing-on-azure-talk/providers/Microsoft.DocumentDB/databaseAccounts/esonazure'.",
+      "type": "Microsoft.DocumentDB/databaseAccounts",
+      "kind": "GlobalDocumentDB",
+      "name": "[parameters('databaseAccounts_esonazure_name')]",
+      "apiVersion": "2015-04-08",
+      "location": "West Europe",
+      "tags": {
+        "defaultExperience": "Core (SQL)"
+      },
+      "scale": null,
+      "properties": {
+        "ipRangeFilter": "",
+        "enableAutomaticFailover": false,
+        "enableMultipleWriteLocations": false,
+        "isVirtualNetworkFilterEnabled": false,
+        "virtualNetworkRules": [],
+        "databaseAccountOfferType": "Standard",
+        "consistencyPolicy": {
+          "defaultConsistencyLevel": "Session",
+          "maxIntervalInSeconds": 5,
+          "maxStalenessPrefix": 100
+        },
+        "locations": [
+          {
+            "locationName": "West Europe",
+            "provisioningState": "Succeeded",
+            "failoverPriority": 0
+          }
+        ],
+        "capabilities": []
+      },
+      "dependsOn": []
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/8a22d1e5-bf7f-433a-bfa2-a480209f6bc5/resourceGroups/event-sourcing-on-azure-talk/providers/Microsoft.Storage/storageAccounts/esonazuretalk'.",
+      "type": "Microsoft.Storage/storageAccounts",
+      "sku": {
+        "name": "Standard_LRS",
+        "tier": "Standard"
+      },
+      "kind": "StorageV2",
+      "name": "[parameters('storageAccounts_esonazuretalk_name')]",
+      "apiVersion": "2018-07-01",
+      "location": "westeurope",
+      "tags": {},
+      "scale": null,
+      "properties": {
+        "networkAcls": {
+          "bypass": "AzureServices",
+          "virtualNetworkRules": [],
+          "ipRules": [],
+          "defaultAction": "Allow"
+        },
+        "supportsHttpsTrafficOnly": true,
+        "encryption": {
+          "services": {
+            "file": {
+              "enabled": true
+            },
+            "blob": {
+              "enabled": true
+            }
+          },
+          "keySource": "Microsoft.Storage"
+        },
+        "accessTier": "Hot"
+      },
+      "dependsOn": []
+    }
+  ]
+}
